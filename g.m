@@ -16,30 +16,36 @@ function xplus = g(x)
 
     % state
 
+    % state initial condition
+    %x0 = [z_0(1); zhat_0(2); tauP0(3); tauO0(4); tauN0(5); taud0(6); q0(7); y_0(8); y_m0(9); tP_m0(10); 
+    %      zhat_nd_0(11); zhat_p_0(12); tP_mp0(13); w0];
+    %w0 = [tauT0(14); tauM0(15); tauS0(16); qP0(17); p0(18); M_m0(19-24); M_s0(25-30);];
+    
     global A M L T1 T2 T1_d T2_d c d T_t
     
-    z = [x(1); x(2);];
-    zhat = [x(3); x(4);];
-    tauP = x(5);
-    tauO = x(6);
-    tauN = x(7);
-    taud = x(8);
-    q    = x(9);
-    y    = x(10);
-    y_m  = x(11);
-    tP_m = x(12);
-    zhat_nd = [x(13); x(14);];
-    zhat_p = [x(15); x(16);];
-    tP_mp = x(17);
+    % H_a states
+    z = x(1);
+    zhat = x(2);
+    tauP = x(3);
+    tauO = x(4);
+    tauN = x(5);
+    taud = x(6);
+    q    = x(7);
+    y    = x(8);
+    y_m  = x(9);
+    tP_m = x(10);
+    zhat_nd = x(11);
+    zhat_p = x(12);
+    tP_mp = x(13);
 
-    tauT = x(18);
-    tauM = x(19);
-    tauS = x(20);
-    qP = x(21);
-    p = x(22);
-    
-    M_m = [x(23); x(24); x(25); x(26); x(27); x(28)];
-    M_s = [x(29); x(30); x(31); x(32); x(33); x(34)];
+    % H_b states
+    tauT = x(14);
+    tauM = x(15);
+    tauS = x(16);
+    qP = x(17);
+    p = x(18);    
+    M_m = [x(19); x(20); x(21); x(22); x(23); x(24)];
+    M_s = [x(25); x(26); x(27); x(28); x(29); x(30)];
      
 %     % 1588 state initial condition
 % w0 = [tauT0; tauM0; tauS0; qP0; M_m0; M_s0; p0];

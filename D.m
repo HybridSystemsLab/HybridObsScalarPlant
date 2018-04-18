@@ -16,18 +16,19 @@ function inside = D(x)
 
     global T_t
 
-    tauN = x(7);
-    taud = x(8);
-    q = x(9);
- 
-    tauT = x(18);
-    tauM = x(19);
-    tauS = x(20);
-    qP = x(21);
-    p = x(22);
+    % H_a states
+    tauN = x(5);
+    taud = x(6);
+    q    = x(7);
     
-    M_m = [x(23); x(24); x(25); x(26); x(27); x(28)];
-    M_s = [x(29); x(30); x(31); x(32); x(33); x(34)];
+    % H_b states
+    tauT = x(14);
+    tauM = x(15);
+    tauS = x(16);
+    qP = x(17);
+    p = x(18);    
+    M_m = [x(19); x(20); x(21); x(22); x(23); x(24)];
+    M_s = [x(25); x(26); x(27); x(28); x(29); x(30)];
      
 %     
 %     if (tauN <= 0 && q == 0) || (taud <= 0 && q == 1)

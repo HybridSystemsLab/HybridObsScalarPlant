@@ -15,15 +15,17 @@ function [value] = C(x)
 %   Revision: 0.0.0.3 Date: 05/20/2015 3:42:00
 
     global T_t
-
-    tauN = x(7);
-    taud = x(8);
-    q = x(9);
     
-    tauT = x(18);
-    tauM = x(19);
-    tauS = x(20);
-    qP = x(21);
+    % H_a states
+    tauN = x(5);
+    taud = x(6);
+    q    = x(7);
+    
+    % H_b states
+    tauT = x(14);
+    tauM = x(15);
+    tauS = x(16);
+    qP = x(17);  
     
     if ((tauN > 0) && q == 0) || ((taud > 0) && q == 1) || ((tauM > 0) && (qP == 1)) || ((tauS > 0)&& (qP == 2)) || (tauT <= T_t)
         value = 1;

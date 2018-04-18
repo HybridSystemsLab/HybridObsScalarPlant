@@ -13,18 +13,19 @@ function xdot = f(x)
 %   PLOTHARCCOLOR, PLOTHARCCOLOR3D, PLOTHYBRIDARC, PLOTJUMPS.
 %   Copyright @ Hybrid Systems Laboratory (HSL),
 %   Revision: 0.0.0.3 Date: 05/20/2015 3:42:00
+
+    % H_a states
+    z = x(1);
+    zhat = x(2);
+    q = x(7);
+    zhat_nd = x(11);
+    zhat_dp = x(12);
     
-    % state
-    z = [x(1); x(2);];
-    zhat = [x(3); x(4);];
-    q = x(9);
-    zhat_nd = [x(13); x(14);];
-    zhat_dp = [x(15); x(16);];
+    % H_b states
+    qP = x(17);
     
-    qP = x(21);
-    
-    M_m = [x(23); x(24); x(25); x(26); x(27); x(28)];
-    M_s = [x(29); x(30); x(31); x(32); x(33); x(34)];
+    M_m = [x(19); x(20); x(21); x(22); x(23); x(24)];
+    M_s = [x(25); x(26); x(27); x(28); x(29); x(30)];
     
     global A M
     
